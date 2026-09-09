@@ -54,3 +54,119 @@ body {
   box-shadow: 0 0 32px rgba(56, 189, 248, 0.12);
   border-color: rgba(56, 189, 248, 0.4);
 }
+
+/* Night-sky rocket launch animation */
+@keyframes rocket-ascent {
+  0% {
+    transform: translate3d(8vw, 78vh, 0) rotate(-18deg) scale(0.55);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(72vw, -18vh, 0) rotate(-28deg) scale(1.05);
+    opacity: 0;
+  }
+}
+
+@keyframes rocket-ascent-alt {
+  0% {
+    transform: translate3d(55vw, 85vh, 0) rotate(-12deg) scale(0.4);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(92vw, 5vh, 0) rotate(-22deg) scale(0.7);
+    opacity: 0;
+  }
+}
+
+@keyframes flame-flicker {
+  0%,
+  100% {
+    transform: scaleY(1) translateY(0);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scaleY(1.25) translateY(2px);
+    opacity: 1;
+  }
+}
+
+@keyframes trail-fade {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.3);
+  }
+  30% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(1.2);
+  }
+}
+
+.rocket-flight {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: rocket-ascent 14s ease-in infinite;
+  will-change: transform, opacity;
+}
+
+.rocket-flight--delay {
+  animation-name: rocket-ascent-alt;
+  animation-duration: 18s;
+  animation-delay: 5s;
+}
+
+.rocket-ship {
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.45));
+}
+
+.rocket-flame {
+  transform-origin: 32px 48px;
+  animation: flame-flicker 0.28s ease-in-out infinite;
+}
+
+.rocket-trail {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  width: 6px;
+  height: 72px;
+  margin-left: -3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    rgba(253, 224, 71, 0.55),
+    rgba(249, 115, 22, 0.2),
+    transparent
+  );
+  filter: blur(1px);
+  animation: trail-fade 14s ease-in infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rocket-flight,
+  .rocket-flight--delay,
+  .rocket-flame,
+  .rocket-trail {
+    animation: none !important;
+  }
+  .rocket-flight {
+    opacity: 0.55;
+    transform: translate3d(62vw, 12vh, 0) rotate(-24deg);
+  }
+  .rocket-flight--delay {
+    display: none;
+  }
+}

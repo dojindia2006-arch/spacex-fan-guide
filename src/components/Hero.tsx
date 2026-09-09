@@ -23,6 +23,76 @@ export default function Hero() {
         </svg>
       </div>
 
+      {/* Animated rocket — decorative SVG, not official branding */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="rocket-flight">
+          <svg
+            className="rocket-ship h-16 w-16 sm:h-20 sm:w-20"
+            viewBox="0 0 64 64"
+            fill="none"
+          >
+            <defs>
+              <linearGradient id="bodyGrad" x1="32" y1="4" x2="32" y2="48" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#f8fafc" />
+                <stop offset="1" stopColor="#94a3b8" />
+              </linearGradient>
+              <linearGradient id="flameGrad" x1="32" y1="48" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#fde68a" />
+                <stop offset="0.45" stopColor="#f97316" />
+                <stop offset="1" stopColor="#ef4444" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            {/* exhaust plume */}
+            <g className="rocket-flame">
+              <path d="M26 48 Q32 64 38 48" fill="url(#flameGrad)" opacity="0.95" />
+              <path d="M28 48 Q32 58 36 48" fill="#fef08a" opacity="0.8" />
+            </g>
+            {/* fins */}
+            <path d="M20 40 L26 34 L26 46 Z" fill="#38bdf8" opacity="0.9" />
+            <path d="M44 40 L38 34 L38 46 Z" fill="#38bdf8" opacity="0.9" />
+            {/* body */}
+            <path
+              d="M32 6 C26 14 24 28 24 40 L40 40 C40 28 38 14 32 6 Z"
+              fill="url(#bodyGrad)"
+            />
+            {/* window */}
+            <circle cx="32" cy="22" r="4" fill="#0ea5e9" stroke="#e0f2fe" strokeWidth="1.2" />
+            {/* nose highlight */}
+            <path d="M32 6 C30 10 29 14 28.5 18" stroke="#fff" strokeWidth="1" opacity="0.5" />
+          </svg>
+          <div className="rocket-trail" />
+        </div>
+        <div className="rocket-flight rocket-flight--delay">
+          <svg
+            className="rocket-ship h-10 w-10 opacity-70"
+            viewBox="0 0 64 64"
+            fill="none"
+          >
+            <defs>
+              <linearGradient id="bodyGrad2" x1="32" y1="4" x2="32" y2="48" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#e2e8f0" />
+                <stop offset="1" stopColor="#64748b" />
+              </linearGradient>
+              <linearGradient id="flameGrad2" x1="32" y1="48" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#fde68a" />
+                <stop offset="0.5" stopColor="#fb923c" />
+                <stop offset="1" stopColor="#ef4444" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <g className="rocket-flame">
+              <path d="M26 48 Q32 64 38 48" fill="url(#flameGrad2)" />
+            </g>
+            <path d="M20 40 L26 34 L26 46 Z" fill="#7dd3fc" />
+            <path d="M44 40 L38 34 L38 46 Z" fill="#7dd3fc" />
+            <path
+              d="M32 6 C26 14 24 28 24 40 L40 40 C40 28 38 14 32 6 Z"
+              fill="url(#bodyGrad2)"
+            />
+            <circle cx="32" cy="22" r="3.5" fill="#38bdf8" />
+          </svg>
+        </div>
+      </div>
+
       <div className="relative mx-auto max-w-5xl text-center">
         <p className="mb-4 inline-block rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent sm:text-sm">
           비공식 · 팬 주도진의 정보 사이트
