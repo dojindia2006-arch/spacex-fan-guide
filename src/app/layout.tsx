@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
   description:
-    "SpaceX·Starlink와 관련 생태계(xAI, Grok)를 한국어로 정리한 비공식 팬 주도진의 정보 페이지입니다. SpaceX/테슬라/xAI와 무관하며 투자 권유가 아닙니다.",
+    "SpaceX·Starlink와 관련 생태계(xAI, Grok)를 한국어로 정리한 비공식 팬 주도진의 정보 페이지입니다. SpaceX/테슬라/xAI와 무관합니다.",
   keywords: [
     "SpaceX",
     "스페이스엑스",
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     siteName: "SpaceX 팬 가이드",
     title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
     description:
-      "SpaceX·Starlink·xAI·Grok을 한국어로 정리한 비공식 팬 주도진의 정보 페이지. 투자 권유 아님.",
+      "SpaceX·Starlink·xAI·Grok을 한국어로 정리한 비공식 팬 주도진의 정보 페이지.",
   },
   twitter: {
     card: "summary",
     title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
     description:
-      "SpaceX를 한국어로 한눈에. 비공식 팬 주도진의 정보 페이지이며 투자 권유가 아닙니다.",
+      "SpaceX를 한국어로 한눈에. 비공식 팬 주도진의 정보 페이지입니다.",
   },
   alternates: {
     canonical: siteUrl,

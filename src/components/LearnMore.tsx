@@ -37,7 +37,6 @@ export default function LearnMore() {
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
           아래는 공식·공공 성격의 외부 링크와, 이 사이트 개발자 계정입니다.
-          투자·증권·중개 사이트는 포함하지 않습니다.
         </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

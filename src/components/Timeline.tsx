@@ -32,7 +32,7 @@ const milestones = [
   {
     year: "2026",
     title: "나스닥 상장 (SPCX)",
-    desc: "2026년 6월 Class A 보통주가 나스닥에 SPCX 티커로 상장되었습니다. 이 사이트는 투자 권유를 하지 않습니다.",
+    desc: "2026년 6월 Class A 보통주가 나스닥에 SPCX 티커로 상장되었습니다.",
   },
 ];
 

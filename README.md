@@ -2,7 +2,7 @@
 
 SpaceX 로켓·미션·이정표를 한국어로 정리한 **비공식** 팬·정보 사이트입니다.
 
-> **고지:** 비공식 팬 사이트이며 SpaceX/테슬라와 무관함. 투자 권유·금융 조언이 아님.
+> **고지:** 비공식 팬 사이트이며 SpaceX/테슬라와 무관함. (사이트 푸터에 투자 관련 고지 표기)
 
 - 저장소: https://github.com/dojindia2006-arch/spacex-fan-guide
 - 기술: Next.js (App Router) · TypeScript · Tailwind CSS · 정적보내기(`output: 'export'`)

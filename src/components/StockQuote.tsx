@@ -79,7 +79,7 @@ export default function StockQuote() {
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
           나스닥에 상장된 SpaceX(<span className="text-foreground">SPCX</span>)의
-          최근 시세입니다. 투자 권유가 아니며, 매매·중개 링크는 제공하지 않습니다.
+          최근 시세입니다. 매매·중개 링크는 제공하지 않습니다.
         </p>
 
         <div className="mt-8 rounded-2xl border border-border bg-card p-6 sm:p-8">
@@ -147,8 +147,7 @@ export default function StockQuote() {
               새로고침
             </button>
             <p className="text-xs leading-relaxed text-muted/80">
-              참고용 시세이며 지연될 수 있습니다. 투자·매매 결정은 스스로의 판단으로
-              하세요. 출처: {quote?.source ?? "시세 API"}
+              참고용 시세이며 지연될 수 있습니다. 출처: {quote?.source ?? "시세 API"}
             </p>
           </div>
         </div>
