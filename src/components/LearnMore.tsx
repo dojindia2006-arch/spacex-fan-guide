@@ -14,6 +14,11 @@ const links = [
     href: "https://x.com/SpaceX",
     desc: "공식 계정 발표·발사 중계 안내",
   },
+  {
+    name: "웹페이지 개발자 · @Mmfxbow",
+    href: "https://x.com/Mmfxbow",
+    desc: "이 사이트 제작자 주도진의 X(Twitter)",
+  },
 ];
 
 export default function LearnMore() {
@@ -31,11 +36,11 @@ export default function LearnMore() {
           더 알아보기
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
-          아래는 공식·공공 성격의 외부 링크입니다. 투자·증권·중개 사이트는
-          포함하지 않습니다.
+          아래는 공식·공공 성격의 외부 링크와, 이 사이트 개발자 계정입니다.
+          투자·증권·중개 사이트는 포함하지 않습니다.
         </p>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-3">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {links.map((link) => (
             <li key={link.href}>
               <a
