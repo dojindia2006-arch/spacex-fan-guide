@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dojindia2006-arch.github.io/spacex-fan-guide/sitemap.xml
