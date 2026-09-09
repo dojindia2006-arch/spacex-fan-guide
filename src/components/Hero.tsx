@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="rocket-flight">
           <svg
-            className="rocket-ship h-16 w-16 sm:h-20 sm:w-20"
+            className="rocket-ship h-32 w-32 sm:h-44 sm:w-44"
             viewBox="0 0 64 64"
             fill="none"
           >
@@ -64,7 +64,7 @@ export default function Hero() {
         </div>
         <div className="rocket-flight rocket-flight--delay">
           <svg
-            className="rocket-ship h-10 w-10 opacity-70"
+            className="rocket-ship h-24 w-24 sm:h-28 sm:w-28 opacity-80"
             viewBox="0 0 64 64"
             fill="none"
           >

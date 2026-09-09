@@ -58,7 +58,7 @@ body {
 /* Night-sky rocket launch animation */
 @keyframes rocket-ascent {
   0% {
-    transform: translate3d(8vw, 78vh, 0) rotate(-18deg) scale(0.55);
+    transform: translate3d(8vw, 78vh, 0) rotate(-18deg) scale(0.85);
     opacity: 0;
   }
   8% {
@@ -68,21 +68,21 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translate3d(72vw, -18vh, 0) rotate(-28deg) scale(1.05);
+    transform: translate3d(72vw, -18vh, 0) rotate(-28deg) scale(1.35);
     opacity: 0;
   }
 }
 
 @keyframes rocket-ascent-alt {
   0% {
-    transform: translate3d(55vw, 85vh, 0) rotate(-12deg) scale(0.4);
+    transform: translate3d(55vw, 85vh, 0) rotate(-12deg) scale(1.1);
     opacity: 0;
   }
   12% {
     opacity: 0.75;
   }
   100% {
-    transform: translate3d(92vw, 5vh, 0) rotate(-22deg) scale(0.7);
+    transform: translate3d(92vw, 5vh, 0) rotate(-22deg) scale(1.1);
     opacity: 0;
   }
 }
@@ -140,9 +140,9 @@ body {
   position: absolute;
   left: 50%;
   top: 70%;
-  width: 6px;
-  height: 72px;
-  margin-left: -3px;
+  width: 10px
+  height: 110px
+  margin-left: -5px
   border-radius: 999px;
   background: linear-gradient(
     to bottom,
