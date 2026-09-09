@@ -55,16 +55,18 @@ body {
   border-color: rgba(56, 189, 248, 0.4);
 }
 
-/* Cinematic launch animation */
+/* Launch backdrop (rocket drawn on canvas) */
+.launch-canvas-wrap {
+  z-index: 0;
+}
 .launch-sky {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 90% 55% at 50% 100%, rgba(14, 165, 233, 0.22), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 70% 20%, rgba(56, 189, 248, 0.08), transparent 50%),
+    radial-gradient(ellipse 90% 55% at 50% 100%, rgba(14, 165, 233, 0.2), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 70% 18%, rgba(56, 189, 248, 0.07), transparent 50%),
     linear-gradient(180deg, #020617 0%, #030712 45%, #0b1224 100%);
 }
-
 .launch-stars {
   position: absolute;
   inset: 0;
@@ -79,12 +81,11 @@ body {
     radial-gradient(1.5px 1.5px at 15% 60%, #fff, transparent),
     radial-gradient(1px 1px at 60% 70%, #fff, transparent),
     radial-gradient(1px 1px at 90% 10%, #fff, transparent);
-  background-size: 100% 100%;
   animation: stars-drift 40s linear infinite;
 }
 .launch-stars--b {
-  opacity: 0.45;
-  transform: scale(1.2);
+  opacity: 0.4;
+  transform: scale(1.15);
   animation-duration: 70s;
   animation-direction: reverse;
 }
@@ -93,164 +94,16 @@ body {
   left: -10%;
   right: -10%;
   bottom: -8%;
-  height: 38%;
+  height: 36%;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(249, 115, 22, 0.35), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(249, 115, 22, 0.28), transparent 60%),
     radial-gradient(ellipse 90% 70% at 50% 120%, rgba(15, 23, 42, 0.95), transparent 70%);
   filter: blur(2px);
-}
-
-.launch-stage {
-  position: absolute;
-  inset: 0;
-}
-
-.launch-rocket-wrap {
-  position: absolute;
-  left: 50%;
-  bottom: -8%;
-  width: min(52vw, 340px);
-  transform: translateX(-50%);
-  animation: mega-ascent 9s cubic-bezier(0.33, 0.1, 0.2, 1) infinite;
-  filter: drop-shadow(0 0 40px rgba(251, 146, 60, 0.55));
-  will-change: transform, opacity;
-}
-
-.launch-rocket {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.plume-outer,
-.plume-core {
-  transform-origin: 100px 365px;
-  animation: plume-pulse 0.22s ease-in-out infinite alternate;
-}
-.plume-sparks {
-  animation: sparks 0.35s linear infinite;
-}
-.engine-glow {
-  animation: engine-flash 0.18s ease-in-out infinite alternate;
-}
-
-.launch-bloom {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 90vw;
-  height: 55vh;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse at 50% 100%, rgba(253, 186, 116, 0.55), rgba(239, 68, 68, 0.15) 40%, transparent 70%);
-  animation: bloom-burst 9s ease-in infinite;
-  mix-blend-mode: screen;
-}
-
-.launch-smoke {
-  position: absolute;
-  bottom: 0;
-  width: 42vw;
-  height: 45vh;
-  border-radius: 50%;
-  filter: blur(28px);
-  opacity: 0.35;
-  background: radial-gradient(circle, rgba(226, 232, 240, 0.55), transparent 70%);
-  animation: smoke-billow 9s ease-out infinite;
-}
-.launch-smoke--1 { left: 5%; animation-delay: 0s; }
-.launch-smoke--2 { right: 5%; left: auto; animation-delay: 0.15s; }
-.launch-smoke--3 { left: 30%; width: 40vw; opacity: 0.25; animation-delay: 0.35s; }
-
-.launch-shock {
-  position: absolute;
-  left: 50%;
-  bottom: 6%;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(253, 224, 71, 0.55);
-  border-radius: 999px;
-  transform: translate(-50%, 50%);
-  animation: shockwave 9s ease-out infinite;
-}
-.launch-shock--2 {
-  animation-delay: 0.2s;
-  border-color: rgba(248, 250, 252, 0.25);
-}
-
-@keyframes mega-ascent {
-  0% {
-    transform: translateX(-50%) translateY(18vh) scale(0.92);
-    opacity: 0;
-  }
-  6% {
-    opacity: 1;
-  }
-  18% {
-    transform: translateX(-50%) translateY(4vh) scale(1);
-  }
-  55% {
-    transform: translateX(-48%) translateY(-35vh) scale(1.05) rotate(-2deg);
-    opacity: 1;
-  }
-  85% {
-    transform: translateX(-42%) translateY(-95vh) scale(0.88) rotate(-6deg);
-    opacity: 0.85;
-  }
-  100% {
-    transform: translateX(-38%) translateY(-120vh) scale(0.7) rotate(-8deg);
-    opacity: 0;
-  }
-}
-
-@keyframes plume-pulse {
-  from { transform: scaleX(0.92) scaleY(0.95); }
-  to { transform: scaleX(1.08) scaleY(1.15); }
-}
-@keyframes sparks {
-  from { opacity: 0.4; transform: translateY(0); }
-  to { opacity: 1; transform: translateY(8px); }
-}
-@keyframes engine-flash {
-  from { opacity: 0.65; }
-  to { opacity: 1; }
-}
-@keyframes bloom-burst {
-  0%, 8% { opacity: 0.15; transform: translateX(-50%) scale(0.7); }
-  14% { opacity: 1; transform: translateX(-50%) scale(1.15); }
-  40% { opacity: 0.55; }
-  100% { opacity: 0.1; transform: translateX(-50%) scale(1.4); }
-}
-@keyframes smoke-billow {
-  0% { transform: translateY(10%) scale(0.6); opacity: 0; }
-  12% { opacity: 0.45; }
-  45% { transform: translateY(-20%) scale(1.35); opacity: 0.3; }
-  100% { transform: translateY(-55%) scale(1.8); opacity: 0; }
-}
-@keyframes shockwave {
-  0%, 10% { width: 10px; height: 10px; opacity: 0; }
-  14% { opacity: 0.8; }
-  45% { width: 90vw; height: 40vh; opacity: 0; }
-  100% { opacity: 0; }
 }
 @keyframes stars-drift {
   from { background-position: 0 0; }
   to { background-position: 0 -120px; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .launch-rocket-wrap,
-  .plume-outer,
-  .plume-core,
-  .plume-sparks,
-  .engine-glow,
-  .launch-bloom,
-  .launch-smoke,
-  .launch-shock,
-  .launch-stars {
-    animation: none !important;
-  }
-  .launch-rocket-wrap {
-    opacity: 0.9;
-    transform: translateX(-50%) translateY(-10vh);
-  }
+  .launch-stars { animation: none !important; }
 }
