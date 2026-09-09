@@ -5,6 +5,9 @@ export default function Footer() {
         <p className="text-center text-sm leading-relaxed text-muted">
           비공식 팬 사이트이며 SpaceX/테슬라와 무관함. 투자 권유·금융 조언이 아님.
         </p>
+        <p className="mt-3 text-center text-sm text-muted">
+          제작자 주도진
+        </p>
         <p className="mt-3 text-center text-xs text-muted/70">
           © {new Date().getFullYear()} SpaceX 팬 가이드 · 비공식 정보 사이트
         </p>
