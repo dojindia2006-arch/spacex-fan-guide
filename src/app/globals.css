@@ -55,55 +55,54 @@ body {
   border-color: rgba(56, 189, 248, 0.4);
 }
 
-/* Launch backdrop (rocket drawn on canvas) */
-.launch-canvas-wrap {
-  z-index: 0;
+/* Photoreal launch hero */
+.launch-photo-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #020617;
 }
-.launch-sky {
+.launch-photo {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  object-position: center 35%;
+  animation: launch-kenburns 18s ease-in-out infinite alternate;
+  filter: contrast(1.08) saturate(1.12) brightness(0.95);
+  transform-origin: 50% 70%;
+}
+.launch-photo-vignette {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 90% 55% at 50% 100%, rgba(14, 165, 233, 0.2), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 70% 18%, rgba(56, 189, 248, 0.07), transparent 50%),
-    linear-gradient(180deg, #020617 0%, #030712 45%, #0b1224 100%);
+    linear-gradient(180deg, rgba(2,6,23,0.55) 0%, rgba(2,6,23,0.15) 35%, rgba(2,6,23,0.2) 60%, rgba(2,6,23,0.82) 100%),
+    radial-gradient(ellipse at 50% 60%, transparent 30%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none;
 }
-.launch-stars {
+.launch-photo-heat {
   position: absolute;
-  inset: 0;
-  opacity: 0.85;
-  background-image:
-    radial-gradient(1.5px 1.5px at 10% 20%, #fff, transparent),
-    radial-gradient(1px 1px at 25% 40%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 40% 15%, #fff, transparent),
-    radial-gradient(1px 1px at 55% 35%, #fff, transparent),
-    radial-gradient(2px 2px at 70% 22%, #fff, transparent),
-    radial-gradient(1px 1px at 85% 45%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 15% 60%, #fff, transparent),
-    radial-gradient(1px 1px at 60% 70%, #fff, transparent),
-    radial-gradient(1px 1px at 90% 10%, #fff, transparent);
-  animation: stars-drift 40s linear infinite;
+  left: 20%;
+  right: 20%;
+  bottom: 8%;
+  height: 35%;
+  background: radial-gradient(ellipse at 50% 80%, rgba(255,140,40,0.28), transparent 70%);
+  mix-blend-mode: screen;
+  animation: heat-pulse 2.4s ease-in-out infinite;
+  pointer-events: none;
 }
-.launch-stars--b {
-  opacity: 0.4;
-  transform: scale(1.15);
-  animation-duration: 70s;
-  animation-direction: reverse;
+@keyframes launch-kenburns {
+  0% { transform: scale(1.02) translate3d(0, 1.5%, 0); }
+  100% { transform: scale(1.12) translate3d(0, -2.5%, 0); }
 }
-.launch-horizon {
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  bottom: -8%;
-  height: 36%;
-  background:
-    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(249, 115, 22, 0.28), transparent 60%),
-    radial-gradient(ellipse 90% 70% at 50% 120%, rgba(15, 23, 42, 0.95), transparent 70%);
-  filter: blur(2px);
-}
-@keyframes stars-drift {
-  from { background-position: 0 0; }
-  to { background-position: 0 -120px; }
+@keyframes heat-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.06); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .launch-stars { animation: none !important; }
+  .launch-photo,
+  .launch-photo-heat {
+    animation: none !important;
+  }
 }
