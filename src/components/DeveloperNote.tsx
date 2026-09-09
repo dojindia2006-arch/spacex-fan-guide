@@ -21,10 +21,6 @@ export default function DeveloperNote() {
             — 제작자 주도진 (@Mmfxbow)
           </footer>
         </blockquote>
-        <p className="mt-4 text-xs leading-relaxed text-muted/80">
-          위 내용은 제작자 개인의 의견·경험 공유이며, 투자 권유·금융 조언이 아닙니다.
-          투자 결정은 스스로의 판단으로 해 주세요.
-        </p>
       </div>
     </section>
   );
