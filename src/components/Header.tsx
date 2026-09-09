@@ -2,6 +2,7 @@ export default function Header() {
   const links = [
     { href: "#hero", label: "소개" },
     { href: "#stock", label: "시세" },
+    { href: "#news", label: "뉴스" },
     { href: "#rockets", label: "로켓·미션" },
     { href: "#ecosystem", label: "생태계" },
     { href: "#timeline", label: "타임라인" },
