@@ -116,9 +116,6 @@ export default function LaunchVisual() {
         <div className="launch-photo-heat" />
       </div>
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
-      <p className="absolute bottom-3 right-3 z-[1] rounded bg-black/45 px-2 py-1 text-[10px] text-white/70 backdrop-blur-sm">
-        일러스트·연출 이미지 · 공식 SpaceX 사진 아님
-      </p>
     </div>
   );
 }

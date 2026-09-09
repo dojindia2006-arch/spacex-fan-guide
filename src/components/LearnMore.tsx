@@ -139,8 +139,7 @@ export default function LearnMore() {
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
           우주·AI·전기차 등 이야기에서 자주 함께 언급되는 관련 기업과, 공식·공공
-          성격의 외부 링크입니다. 로고는 식별용 간소화 마크이며 각 회사 공식
-          브랜드를 대변하지 않습니다.
+          성격의 외부 링크입니다.
         </p>
 
         <h3 className="mt-10 text-sm font-semibold uppercase tracking-wide text-accent">

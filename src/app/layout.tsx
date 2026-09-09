@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
   description:
-    "SpaceX·Starlink와 관련 생태계(xAI, Grok)를 한국어로 정리한 비공식 팬 주도진의 정보 페이지입니다. SpaceX/테슬라/xAI와 무관합니다.",
+    "SpaceX·Starlink와 관련 생태계(xAI, Grok)를 한국어로 정리한 비공식 팬 주도진의 정보 페이지입니다.",
   keywords: [
     "SpaceX",
     "스페이스엑스",
