@@ -27,7 +27,7 @@ export default function Header() {
               opacity="0.9"
             />
           </svg>
-          <span className="text-sm sm:text-base">SpaceX 팬 가이드</span>
+          <span className="text-sm sm:text-base">주도진의 SpaceX 정보사이트</span>
         </a>
         <nav aria-label="주요 메뉴" className="hidden gap-5 text-sm text-muted md:flex">
           {links.map((link) => (

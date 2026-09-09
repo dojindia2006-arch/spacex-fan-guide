@@ -9,7 +9,7 @@ export default function Footer() {
           제작자 주도진
         </p>
         <p className="mt-3 text-center text-xs text-muted/70">
-          © {new Date().getFullYear()} SpaceX 팬 가이드 · 비공식 정보 사이트
+          © {new Date().getFullYear()} 주도진의 SpaceX 정보사이트
         </p>
       </div>
     </footer>

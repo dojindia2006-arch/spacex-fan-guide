@@ -14,7 +14,7 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
+  title: "주도진의 SpaceX 정보사이트",
   description:
     "SpaceX·Starlink와 관련 생태계(xAI, Grok)를 한국어로 정리한 비공식 팬 주도진의 정보 페이지입니다.",
   keywords: [
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: siteUrl,
-    siteName: "SpaceX 팬 가이드",
-    title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
+    siteName: "주도진의 SpaceX 정보사이트",
+    title: "주도진의 SpaceX 정보사이트",
     description:
       "SpaceX·Starlink·xAI·Grok을 한국어로 정리한 비공식 팬 주도진의 정보 페이지.",
   },
   twitter: {
     card: "summary",
-    title: "SpaceX 팬 가이드 | 비공식 한국어 소개",
+    title: "주도진의 SpaceX 정보사이트",
     description:
       "SpaceX를 한국어로 한눈에. 비공식 팬 주도진의 정보 페이지입니다.",
   },
