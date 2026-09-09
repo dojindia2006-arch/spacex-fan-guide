@@ -6,6 +6,7 @@ import Rockets from "@/components/Rockets";
 import Ecosystem from "@/components/Ecosystem";
 import Timeline from "@/components/Timeline";
 import Faq from "@/components/Faq";
+import DeveloperNote from "@/components/DeveloperNote";
 import LearnMore from "@/components/LearnMore";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Ecosystem />
         <Timeline />
         <Faq />
+        <DeveloperNote />
         <LearnMore />
       </main>
       <Footer />

@@ -6,6 +6,7 @@ export default function Header() {
     { href: "#ecosystem", label: "생태계" },
     { href: "#timeline", label: "타임라인" },
     { href: "#faq", label: "FAQ" },
+    { href: "#developer-note", label: "한마디" },
     { href: "#learn-more", label: "더 알아보기" },
   ];
 
