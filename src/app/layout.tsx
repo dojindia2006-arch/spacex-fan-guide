@@ -10,8 +10,7 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://dojindia2006-arch.github.io/spacex-fan-guide";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://spacex-fan-guide.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,9 +25,13 @@ export const metadata: Metadata = {
     "재사용 로켓",
     "비공식",
     "한국어",
+    "SPCX",
   ],
-  authors: [{ name: "SpaceX 팬 가이드" }],
+  authors: [{ name: "주도진" }],
   robots: { index: true, follow: true },
+  verification: {
+    google: "b3bB6M_B91b27mtI9tdsvK7YwdbH2eWoQlQKPMIfWoo",
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
