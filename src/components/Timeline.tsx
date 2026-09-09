@@ -29,6 +29,11 @@ const milestones = [
     title: "Starship 개발·시험",
     desc: "완전 재사용을 목표로 한 Starship·Super Heavy 시스템의 시험 비행과 개발이 이어지고 있습니다.",
   },
+  {
+    year: "2026",
+    title: "나스닥 상장 (SPCX)",
+    desc: "2026년 6월 Class A 보통주가 나스닥에 SPCX 티커로 상장되었습니다. 이 사이트는 투자 권유를 하지 않습니다.",
+  },
 ];
 
 export default function Timeline() {

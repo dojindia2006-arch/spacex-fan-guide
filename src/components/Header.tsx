@@ -1,6 +1,7 @@
 export default function Header() {
   const links = [
     { href: "#hero", label: "소개" },
+    { href: "#stock", label: "시세" },
     { href: "#rockets", label: "로켓·미션" },
     { href: "#timeline", label: "타임라인" },
     { href: "#faq", label: "FAQ" },
