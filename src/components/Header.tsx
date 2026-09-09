@@ -3,6 +3,7 @@ export default function Header() {
     { href: "#hero", label: "소개" },
     { href: "#stock", label: "시세" },
     { href: "#rockets", label: "로켓·미션" },
+    { href: "#ecosystem", label: "생태계" },
     { href: "#timeline", label: "타임라인" },
     { href: "#faq", label: "FAQ" },
     { href: "#learn-more", label: "더 알아보기" },
